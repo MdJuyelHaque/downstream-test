@@ -1,13 +1,9 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'ENV', description: 'enter env value')
+    }
     stages {
-      
-        parameters([
-                            string( 
-                                name: 'ENV', 
-                                trim: true
-                            )
-                        ])
                    
         stage('Example') {
             steps {
