@@ -1,7 +1,8 @@
 pipeline {
     agent any
     stages {
-       parameters(
+       properties([
+         parameters([
                             string(
                                 defaultValue: 'Juyel', 
                                 name: 'ENV', 
