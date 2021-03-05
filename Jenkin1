@@ -4,10 +4,10 @@ node () {
         parameters {
                     string(name: 'test', defaultValue: 'juyel haque', description: 'Test pipeline')
                 }
-	stage ('Job1 - Checkout') {
+	stage ('Job3 - Checkout') {
  	 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Mdjuyel', url: 'https://github.com/MdJuyelHaque/downstream-test']]]) 
 	}
-	stage ('Job1 - Build') {
+	stage ('Job3 - Build') {
  			// Shell build step
 sh """ 
 echo $test 
