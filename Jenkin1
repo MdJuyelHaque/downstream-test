@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    parameters { choice(name: 'ENV', string:'juyel' , description: '') }
+    stages {
+        stage("Param Trigger") {
+            steps {
+                build job: 'job_2_pipeline', parameters: [string(name: 'ENV', value: "${params.ENV}")]
+            }
+        }
+    }
+}
