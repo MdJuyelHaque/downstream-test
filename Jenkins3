@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    parameters { string(name: 'ENV', defaultValue: "Helloworld", description: '') }
     stages {
         stage("PARAM 2") {
             steps {
