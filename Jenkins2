@@ -1,7 +1,7 @@
 pipeline {
     agent any
+    parameters { choice(name: 'ENV', choices: ['Dev', 'Qa', 'Prod'], description: '') }
     stages {
-        parameters { choice(name: 'ENV', choices: ['Dev', 'Qa', 'Prod'], description: '') }
         stage("PARAM 1") {
             steps {
                 build job: 'job2', parameters: [string(name: 'ENV', value: "${params.ENV}")]
