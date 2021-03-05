@@ -1,7 +1,8 @@
 pipeline {
     agent any
     stages {
-        parameters(
+      properties([
+        parameters([
                             string( 
                                 name: 'ENV', 
                                 trim: true
