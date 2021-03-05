@@ -1,6 +1,9 @@
 pipeline {
     agent any
     stages {
+        parameters {
+        string(name: 'ENV', description: 'enter env value')
+    }
         stage('Example') {
             steps {
                 script{
