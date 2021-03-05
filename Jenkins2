@@ -1,8 +1,15 @@
 pipeline {
     agent any
     stages {
-        parameters { string(name: 'ENV', value: 'juyel', description: 'enter') 
-        }
+       parameters(
+                            string(
+                                defaultValue: 'Juyel', 
+                                name: 'ENV', 
+                                trim: true
+                            )
+                        ])
+                    ])
+        
         stage("PARAM 1") {
             steps {
                 build job: 'job2', parameters: [string(name: 'ENV', value: "${params.ENV}")]
