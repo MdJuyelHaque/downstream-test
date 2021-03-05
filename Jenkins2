@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+      properties{
        
          parameters([
                             string(
@@ -9,7 +10,7 @@ pipeline {
                                 trim: true
                             )
                         ])
-                    
+                    }
         
         stage("PARAM 1") {
             steps {
