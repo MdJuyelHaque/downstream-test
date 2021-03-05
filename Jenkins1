@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-      properties([
+      
         parameters([
                             string( 
                                 name: 'ENV', 
                                 trim: true
                             )
                         ])
-                    ])
+                   
         stage('Example') {
             steps {
                 script{
