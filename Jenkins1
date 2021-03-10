@@ -1,7 +1,8 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'ENV', description: 'enter env value')
+        string(name: 'ENV', description: 'enter env value'),
+        string(name: 'ENV1', description: 'enter env value')
     }
     stages {
                    
@@ -9,6 +10,7 @@ pipeline {
             steps {
                 script{
                     echo "${params.ENV}"
+                    echo "${params.ENV1}"
                 }
             }
         }
