@@ -1,14 +1,18 @@
 pipeline {
     agent any
-    parameters { string(name: 'ENV', defaultValue: 'Fal', description: '') }
-    parameters { string(name: 'ENV1', defaultValue: 'Juyel', description: '') }
+    parameters { string(name: 'ENV', defaultValue: 'Fal', description: ''),string(name: 'ENV1', defaultValue: 'Fal', description: '')
+    
+    
+    
+    }
+    
     stages {
         stage("PARAM 1") {
             when {
              branch 'dev'
       }
             steps {
-                build job: 'multibrnch2/dev',wait: false,parameters: [string(name: 'ENV', value: "${params.ENV}")
+                build job: 'multibrnch2/dev',wait: false,parameters: [string(name: 'ENV', value: "${params.ENV}"),
                 string(name: 'ENV1', value: "${params.ENV1}")
                       
                 
