@@ -1,8 +1,8 @@
 pipeline {
     agent any
     parameters { 
-      string(name: 'ENV', defaultValue: 'Fal', description: '')
-      string(name: 'ENV1', defaultValue: 'Fal', description: '')
+      string(name: 'ENV', defaultValue: 'JJ', description: '')
+      string(name: 'ENV1', defaultValue: 'Juyel', description: '')
     
     
     
