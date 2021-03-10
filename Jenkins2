@@ -9,7 +9,7 @@ pipeline {
       }
             steps {
                 build job: 'multibrnch2/dev',wait: false,parameters: [string(name: 'ENV', value: "${params.ENV}")
-                 string(name: 'ENV1', value: "${params.ENV1}")
+                build job: 'multibrnch2/dev',wait: false,parameters: [string(name: 'ENV', value: "${params.ENV1}")
                 
                 ]
             }
