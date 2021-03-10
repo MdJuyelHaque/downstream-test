@@ -3,9 +3,6 @@ pipeline {
     parameters { string(name: 'ENV', defaultValue: 'False', description: '') }
     stages {
         stage("PARAM 1") {
-            when {
-              branch 'main'
-      }
             steps {
                 build job: 'multibrnch2/main',wait: false, parameters: [string(name: 'ENV', value: "${params.ENV}")]
             }
